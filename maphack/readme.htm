@@ -1,0 +1,1373 @@
+<HTML>
+<HEAD>
+<TITLE>Mousepad's Diablo II Maphack</TITLE>
+</HEAD>
+
+<STYLE TYPE="text/css">
+#header1 {font-size: x-large; text-align: center}
+#header2 {font-size: small; text-align: center}
+#header3 {font-size: medium; text-align: center}
+#header4 {font-size: x-small; text-align: center}
+#table1 {font-size: xx-small}
+#table2 {font-size: x-small; text-align: center}
+#tablenote {font-size: xx-small}
+CODE {font-size: x-small}
+CAPTION {font-size: x-small; font-weight:bold}
+</STYLE>
+
+<BODY STYLE="font-family: Verdana; font-size: x-small">
+
+<P ID="header1">Mousepad's Diablo II Maphack</P>
+<P ID="header2">Version 6.5f for Diablo II & Diablo II LOD v1.10</P>
+
+<P><HR>
+<DIV ID="header3">CONTENTS</DIV><P>
+
+<DIV ID="header4">
+<A HREF="#ABOUT">About</A><P>
+<A HREF="#HOWTOUSE">How to use</A><P>
+<A HREF="#FAQ">FAQ</A><P>
+<A HREF="#CONFIG">Configuration</A><P>
+<A HREF="#HISTORY">History</A><P>
+</DIV>
+
+<P><A NAME="ABOUT"></A><HR>
+<DIV ID="header3">ABOUT</DIV><P>
+
+Maphack is a <!--freeware -->realm and single player hack for Diablo II and Diablo II LOD that adds many useful extra features.<BR>
+<BR>
+Features :-<BR>
+<BR>
+Reveal automap for whole act, including quest features, many shrines and cave/stairway level names.<BR>
+Show all shrines on automap sooner than normal, each type with different graphics.<BR>
+Full screen light radius, full infravision (see through walls) and sunny weather.<BR>
+Show monsters, selected items, unopened chests and hostile arrows/bolts on automap.<BR>
+Show special monsters and hostile players different colour on automap.<BR>
+Show monster enchantments, auras and immunities on automap.<BR>
+Change colour or hide selected items on ground.<BR>
+Hide selected monster and missiles corpses.<BR>
+Show rune numbers and number of sockets on items.<BR>
+Virtual map scrolling, allowing casting or shooting at huge ranges.<BR>
+Disable unwanted monster death animinations (eg shenk).<BR>
+Change monster life bar colour.<BR>
+Protect socketed items from accidental socketing.<BR>
+Show if cow king killed in quest log.<BR>
+View other players, iron golems, valkyries and shadow warriors/masters equipment.<BR>
+Automatic exit game on low life and/or hostility.<BR>
+Many settings configurable.<BR>
+<BR>
+Files included :-<BR>
+<BR>
+D2MAPHACK.EXE - Maphack dll loader, run this.<BR>
+D2MAPHACK.DLL - Maphack dll.<BR>
+D2MAPHACK.CFG - Configuration file (editable).<BR>
+D2MAPHACK.VCB - Vocabulary file for configuration (editable).<BR>
+README.HTML - This file.<BR>
+SHRINES.TXT - List of shrine numbers.<BR>
+BLOB*.BMP - Automap blob images (editable).<BR>
+SHRINE*.BMP - Automap shrine images (editable).<BR>
+MINISHRINE*.BMP - Automap minishrine images (editable).<BR>
+
+<P><A NAME="HOWTOUSE"></A><HR>
+<DIV ID="header3">HOW TO USE</DIV><P>
+
+Installation :-<BR>
+<BR>
+1. Extract all files from D2MAPHACK.ZIP to any directory (you only have to do this once).<BR>
+2. Run Diablo II.<BR>
+3. Alt+tab out of Diablo II.<BR>
+4. Run D2MAPHACK.EXE.<BR>
+5. Click on "Install/update".<BR>
+6. Alt+tab back to Diablo II and play.<BR>
+<BR>
+Default keys in game (on numpad) :-<BR>
+<BR>
+"-" - Reveal automap for whole act.<BR>
+"*" - Toggle full screen light radius, full infravision and sunny weather.<BR>
+"/" - Toggle show monsters on automap.<BR>
+"+" - Toggle show hidden items.<BR>
+Scroll lock - Toggle virtual map scrolling.<BR>
+Pause/Break - Center virtual map.<BR>
+
+<P><A NAME="FAQ"></A><HR>
+<DIV ID="header3">FAQ</DIV><P>
+
+<b>I get the error "Diablo II not loaded".</b><P><blockquote>
+Maphack has to be run each time you play, run Diablo II, alt-tab out, run and install maphack then alt-tab back to Diablo II.<BR>
+</blockquote><P>
+
+<b>I get the error "D2MAPHACK.DLL not found".</b><P><blockquote>
+The file D2MAPHACK.DLL is missing, possible causes are :-<BR>
+1. You ran maphack directly from the zip file, that doesn't work anymore.<BR>
+2. You didn't extract all the files from the zip.<BR>
+3. You moved the files after extracting and missed the dll because by default windows hides system files.<BR>
+</blockquote><P>
+
+<b>I get the error "Unknown game version".</b><P><blockquote>
+Either your using an out of date version, Diablo II was just updated or another installed hack clashes with maphack. No solution.<BR>
+</blockquote><P>
+
+<b>I can't get maphack to work with d2loader.</b><P><blockquote>
+Run maphack as a plugin by copying all the maphack files to your d2loader plugin directory and restart d2loader. NOTE if it can't be installed you won't see any error messages.<BR>
+</blockquote><P>
+
+<b>When I click on install nothing appears to happen.</b><P><blockquote>
+That means its successfully installed, now play Diablo II.<BR>
+</blockquote><P>
+
+<b>Monsters don't show up on automap and pressing the toggle show monsters key has no effect.</b><P><blockquote>
+Press F11 (default show party on automap toggle).<BR>
+</blockquote><P>
+
+<b>Monsters immunitys don't show up on automap.</b><P><blockquote>
+Press F12 (default show names on automap toggle).<BR>
+</blockquote><P>
+
+<b>How can I use maphack without a numpad?</b><P><blockquote>
+Change the following lines in D2MAPHACK.CFG file to use keys 0987 :-<BR>
+<BR>
+<CODE>
+Reveal Act Automap Key: 0x30<BR>
+Visuals Toggle: 1, 0x39<BR>
+Automap Monsters Toggle: 1, 0x38<BR>
+Hidden Items Toggle: 1, 0x37<BR>
+</CODE>
+</blockquote><P>
+
+<b>How do I view another players equipment?</b><P><blockquote>
+Hover cursor over a player so you see their name and press view equipment key (default "0").<BR>
+</blockquote><P>
+
+<b>After installing maphack I can't interact with NPCs/stash/waypoints/etc.</b><P><blockquote>
+You have "Perm Show Items Toggle" on, probably from using MHC defaults.<BR>
+</blockquote><P>
+
+<b>Whats this red <SPAN STYLE="color:#ff0000">X</SPAN> on top left of act 1 quest log?</b><P><blockquote>
+That just means you have killed cow king.<BR>
+</blockquote><P>
+
+<b>How do I completely uninstall maphack?</b><P><blockquote>
+Exit Diablo II then delete maphack files.<BR>
+</blockquote><P>
+
+<A NAME="FAQ2"></A>
+<b>Can blizzard detect maphack usage and delete my account/ban my cd key?</b><P><blockquote>
+Qualified no, the follow could be in theory be detected :-<BR>
+<BR>
+Repeatedly casting over large distances using scroll lock.<BR>
+Repeatedly casting skills at targets through walls using infravision (before v4.7d).<BR>
+Repeatedly casting iron golem on ground next to a hidden suitable item (before v4.7d).<BR>
+</blockquote><P>
+
+<b>Are you going to make a version of maphack for the mac?</b><P><blockquote>
+No, I don't have a mac or the necessary experience.<BR>
+</blockquote><P>
+
+<b>I downloaded a version from a dubious site and it doesnt work and/or my account has been stolen.</b><P><blockquote>
+Don't mail me, remove subseven/netdevil (optional).<BR>
+</blockquote><P>
+
+<b>I mailed you about a problem mentioned above and haven't got a reply.</b><P><blockquote>
+Read this FAQ again.<BR>
+</blockquote><P>
+
+<P><A NAME="CONFIG"></A><HR>
+<DIV ID="header3">CONFIGURATION</DIV><P>
+
+Basic variable format :-<BR>
+<BR>
+<CODE>
+Variable Name[1st array indices][2nd array indices][etc]: values<BR>
+</CODE>
+<BR>
+Notes :-<BR>
+<BR>
+Any part of line can be replaced with an appropriate "word" from D2MAPHACK.VCB (vocabulary file).<BR>
+Variables have 0 to 4 array dimensions, omiting an array is same as specifying 0+ (all).<BR>
+Array indices are a comma seperated list of either a single number, a range seperated by a dash or a number followed by a plus (to limit of array).<BR>
+Values are a comma seperated list of 1 to 2 numbers (hex or decimal) or strings, missing values are unchanged.<BR>
+Variables can be used more than once, with the last overiding (if array indices permit).<BR>
+
+<P>
+
+<CENTER>
+
+<TABLE ID="table1" border="1" cellspacing="0" cellpadding="2">
+<CAPTION>Variables<BR><BR></CAPTION>
+
+<TR><TH>
+Variables
+</TH><TH>
+Arrays
+</TH><TH>
+Values
+</TH><TH>
+Examples
+</TH></TR>
+
+<TR><TD>
+Reveal Act Automap Key<BR>
+Reveal Level Automap Key<BR>
+View Equipment Key<BR>
+View Info Page Key<br>
+Save Item List Key<br>
+Quick Exit Game Key<BR>
+Yard Radius Decrease Key<br>
+Yard Radius Increase Key<br>
+Center Map Scroll Key<BR>
+</TD><TD>
+-
+</TD><TD>
+Key code
+</TD><TD>
+Reveal Act Automap Key: VK_SUBTRACT<BR>
+Quick Exit Game Key: -1<BR>
+</TD></TR>
+
+<TR><TD>
+Full Visuals Toggle<BR>
+&nbsp;Weather Toggle<BR>
+&nbsp;Infravision Toggle<BR>
+&nbsp;Light Radius Toggle<BR>
+&nbsp;Screen Shake Toggle<BR>
+
+Hidden Corpses Toggle<BR>
+Automap Monsters Toggle<BR>
+Automap Level Names Toggle<BR>
+Automap Chests Toggle<BR>
+Automap Items Toggle<BR>
+Automap Missiles Toggle<BR>
+Automap Active Rooms Toggle<BR>
+Hidden Items Toggle<BR>
+Scroll Map Toggle<BR>
+Automap Screen Area Toggle<BR>
+Monster TC Toggle<BR>
+Monster Levels Toggle<BR>
+<!--Perm Show Items Toggle<BR>-->
+Game Time Toggle<BR>
+Drop Protect Toggle<BR>
+Input Line Toggle<BR>
+Out Town Select Toggle<BR>
+
+Mini Shrines Toggle<BR>
+Diagonal Scroll Toggle<BR>
+
+Chicken Life Toggle<BR>
+Chicken Hostile Toggle<BR>
+Chicken Hostile Nearby Toggle<BR>
+
+Socket Protect Toggle<BR>
+Rune Numbers Toggle<BR>
+Socket Numbers Toggle<BR>
+Item Levels Toggle<BR>
+Unit Numbers Toggle<BR>
+</TD><TD>
+-
+</TD><TD>
+Default, Key code
+</TD><TD>
+Full Visuals Toggle: 1, VK_MULTIPLY<BR>
+Hidden Items Toggle: 0, VK_ADD<BR>
+Game Time Toggle: 1, -1<BR>
+</TD></TR>
+
+<TR><TD>
+Automap Party Default<BR>
+Automap Names Default<BR>
+</TD><TD>
+-
+</TD><TD>
+Flag
+</TD><TD>
+Automap Party Default: 1
+</TD></TR>
+
+<TR><TD>
+Level Name Colour<BR>
+
+Quest Item Colour<BR>
+
+Monster Desc Colour<BR>
+</TD><TD>
+-
+</TD><TD>
+Text colour
+</TD><TD>
+Level Name Colour: White
+</TD></TR>
+
+<TR><TD>
+Staff Tomb Level Desc<BR>
+
+Extra Strong Desc<BR>
+Extra Fast Desc<BR>
+Cursed Desc<BR>
+Magic Resistant Desc<BR>
+Fire Enchanted Desc<BR>
+Champion Desc<BR>
+Lightning Enchanted Desc<BR>
+Cold Enchanted Desc<BR>
+Thief Desc<BR>
+Mana Burn Desc<BR>
+Teleportation Desc<BR>
+Spectral Hit Desc<BR>
+Stone Skin Desc<BR>
+Multiple Shots Desc<BR>
+Ghostly Desc<BR>
+Fanatic Desc<BR>
+Possessed Desc<BR>
+Berserker Desc<BR>
+
+Might Aura Desc<BR>
+Holy Fire Aura Desc<BR>
+Blessed Aim Aura Desc<BR>
+Holy Freeze Aura Desc<BR>
+Holy Shock Aura Desc<BR>
+Conviction Aura Desc<BR>
+Fanaticism Aura Desc<BR>
+
+Physical Immunity Desc<BR>
+Magic Immunity Desc<BR>
+Fire Immunity Desc<BR>
+Lightning Immunity Desc<BR>
+Cold Immunity Desc<BR>
+Poison Immunity Desc<BR>
+</TD><TD>
+-
+</TD><TD>
+String
+</TD><TD>
+Staff Tomb Level Desc: " <-HERE"<BR>
+Lightning Enchanted Desc: "%9L"<BR>
+</TD></TR>
+
+<TR><TD>
+Map Scroll Speed<BR>
+Life Bar Transparency<BR>
+
+Chicken Life<BR>
+Chicken Hostile Life<BR>
+Chicken Hostile Nearby Life<BR>
+
+Good Gold Number<BR>
+</TD><TD>
+-
+</TD><TD>
+Number
+</TD><TD>
+Map Scroll Speed: 16
+</TD></TR>
+
+<TR><TD>
+Life Bar Colour<BR>
+</TD><TD>
+-
+</TD><TD>
+Pallete colour
+</TD><TD>
+Life Bar Colour: 0x62
+</TD></TR>
+
+<TR><TD>
+Player Blob File<BR>
+Monster Blob File<BR>
+Object Blob File<BR>
+Missile Blob File<BR>
+Item Blob File<BR>
+</TD><TD>
+-
+</TD><TD>
+Filename
+</TD><TD>
+Monster Blob File: "blobdiamond"
+</TD></TR>
+
+<TR><TD>
+Automap Active Rooms Colour<BR>
+Automap Screen Area Colour<BR>
+
+Closed Chest Colour<BR>
+Locked Chest Colour<BR>
+
+Hostile Missile Colour<BR>
+Guided Missile Colour<BR>
+Tracer Missile Colour<BR>
+Other Missile Colour<BR>
+
+Normal Monster Colour<BR>
+Boss Monster Colour<BR>
+Minion Monster Colour<BR>
+Champion Monster Colour<BR>
+Act5 Barbarian Colour<BR>
+
+Neutral Player Colour<BR>
+Hostile Player Colour<BR>
+
+Normal Corpse Colour<BR>
+Boss Corpse Colour<BR>
+Minion Corpse Colour<BR>
+Champion Corpse Colour<BR>
+</TD><TD>
+-
+</TD><TD>
+Automap colour
+</TD><TD>
+Boss Monster Colour: 0x5b
+</TD></TR>
+
+<TR><TD>
+Missile Colours
+</TD><TD>
+Missile
+</TD><TD>
+Automap Colour
+</TD><TD>
+Missile Colours[All Arrows]: -2
+</TD></TR>
+
+<TR><TD>
+Missile Corpses
+</TD><TD>
+Missile
+</TD><TD>
+Flag
+</TD><TD>
+Missile Corpses[Vine Beast Death]: 0
+</TD></TR>
+
+<TR><TD>
+<!--Rare Item Colour*<BR>
+Unique Item Colour*<BR>-->
+
+Good Gold Colour<BR>
+Poor Gold Colour<BR>
+</TD><TD>
+-
+</TD><TD>
+Text colour, Automap colour
+</TD><TD>
+Poor Gold Colour: -1, -2
+</TD></TR>
+
+<TR><TD>
+Item Colours
+</TD><TD>
+Item, Quality, Ethereal, Sockets
+</TD><TD>
+Text colour, Automap colour
+</TD><TD>
+Item Colours[Ear]: -1, -2<BR>
+Item Colours[Shako][Unique]: 11, 0x20<BR>
+Item Colours[Sabre][Set][True][1]: -1, -2<BR>
+</TD></TR>
+
+<TR><TD>
+Charm Colours<BR>
+Rune Colours<BR>
+
+Rejuv Pot Colours<BR>
+Healing Pot Colours<BR>
+Mana Pot Colours<BR>
+
+Gem Colours<BR>
+&nbsp;Amethyst Colours<BR>
+&nbsp;Topaz Colours<BR>
+&nbsp;Sapphire Colours<BR>
+&nbsp;Emerald Colours<BR>
+&nbsp;Ruby Colours<BR>
+&nbsp;Diamond Colours<BR>
+&nbsp;Skull Colours<BR>
+</TD><TD>
+Number
+</TD><TD>
+Text colour, Automap colour
+</TD><TD>
+Rune Colours[10+]: 11, 0x80<BR>
+Gem Colours[Chipped]: Orange<BR>
+</TD></TR>
+
+<TR><TD>
+Monster Colours<BR>
+Monster Corpse Colours<BR>
+</TD><TD>
+Monster
+</TD><TD>
+Automap Colour
+</TD><TD>
+Monster Colours[Undead Stygian Doll 1]: 0x20
+</TD></TR>
+
+<TR><TD>
+Monster Death Anims<BR>
+Monster Corpses<BR>
+</TD><TD>
+Monster
+</TD><TD>
+Flag
+</TD><TD>
+Monster Death Anims[Shenk]: 0<BR>
+Monster Corpses[Wake of Fire-Death Sentry]: 0<BR>
+</TD></TR>
+
+
+</TABLE>
+
+<DIV ID="tablenote">
+<BR>
+<!--* Same as Item Colours[All][Rare/Unique]<BR>-->
+</DIV>
+
+<P>
+
+<A NAME="COLOURS"></A>
+
+<TABLE><TD WIDTH="50%" VALIGN="TOP" ALIGN="CENTER">
+
+<TABLE ID="table2" border="1" cellspacing="0" cellpadding="2">
+<CAPTION>Pallete/Automap colours<BR><BR></CAPTION>
+
+<TR HEIGHT="10"><TD WIDTH="12">
+</TD><TD WIDTH="12">0
+</TD><TD WIDTH="12">1
+</TD><TD WIDTH="12">2
+</TD><TD WIDTH="12">3
+</TD><TD WIDTH="12">4
+</TD><TD WIDTH="12">5
+</TD><TD WIDTH="12">6
+</TD><TD WIDTH="12">7
+</TD><TD WIDTH="12">8
+</TD><TD WIDTH="12">9
+</TD><TD WIDTH="12">A
+</TD><TD WIDTH="12">B
+</TD><TD WIDTH="12">C
+</TD><TD WIDTH="12">D
+</TD><TD WIDTH="12">E
+</TD><TD WIDTH="12">F
+</TD></TR>
+
+<TR HEIGHT="10"><TD>0
+</TD><TD BGCOLOR="#000000">&nbsp
+</TD><TD BGCOLOR="#240000">&nbsp
+</TD><TD BGCOLOR="#1C1808">&nbsp
+</TD><TD BGCOLOR="#2C2410">&nbsp
+</TD><TD BGCOLOR="#3C3418">&nbsp
+</TD><TD BGCOLOR="#5C0000">&nbsp
+</TD><TD BGCOLOR="#484020">&nbsp
+</TD><TD BGCOLOR="#544828">&nbsp
+</TD><TD BGCOLOR="#900000">&nbsp
+</TD><TD BGCOLOR="#8C4810">&nbsp
+</TD><TD BGCOLOR="#BC0000">&nbsp
+</TD><TD BGCOLOR="#D08420">&nbsp
+</TD><TD BGCOLOR="#F4C46C">&nbsp
+</TD><TD BGCOLOR="#8C7C50">&nbsp
+</TD><TD BGCOLOR="#AC9C64">&nbsp
+</TD><TD BGCOLOR="#0C0C08">&nbsp
+</TD></TR>
+
+<TR HEIGHT="10"><TD>1
+</TD><TD BGCOLOR="#141010">&nbsp
+</TD><TD BGCOLOR="#1C1C1C">&nbsp
+</TD><TD BGCOLOR="#28241C">&nbsp
+</TD><TD BGCOLOR="#2C2C2C">&nbsp
+</TD><TD BGCOLOR="#3C3830">&nbsp
+</TD><TD BGCOLOR="#383838">&nbsp
+</TD><TD BGCOLOR="#484848">&nbsp
+</TD><TD BGCOLOR="#585048">&nbsp
+</TD><TD BGCOLOR="#645834">&nbsp
+</TD><TD BGCOLOR="#585858">&nbsp
+</TD><TD BGCOLOR="#74643C">&nbsp
+</TD><TD BGCOLOR="#646464">&nbsp
+</TD><TD BGCOLOR="#7C7470">&nbsp
+</TD><TD BGCOLOR="#848484">&nbsp
+</TD><TD BGCOLOR="#9C9894">&nbsp
+</TD><TD BGCOLOR="#C4C4C4">&nbsp
+</TD></TR>
+
+<TR HEIGHT="10"><TD>2
+</TD><TD BGCOLOR="#F4F4F4">&nbsp
+</TD><TD BGCOLOR="#080404">&nbsp
+</TD><TD BGCOLOR="#100400">&nbsp
+</TD><TD BGCOLOR="#180804">&nbsp
+</TD><TD BGCOLOR="#181008">&nbsp
+</TD><TD BGCOLOR="#1C1410">&nbsp
+</TD><TD BGCOLOR="#240C04">&nbsp
+</TD><TD BGCOLOR="#20180C">&nbsp
+</TD><TD BGCOLOR="#201814">&nbsp
+</TD><TD BGCOLOR="#2C1008">&nbsp
+</TD><TD BGCOLOR="#241C10">&nbsp
+</TD><TD BGCOLOR="#28200C">&nbsp
+</TD><TD BGCOLOR="#380804">&nbsp
+</TD><TD BGCOLOR="#301C10">&nbsp
+</TD><TD BGCOLOR="#302814">&nbsp
+</TD><TD BGCOLOR="#40140C">&nbsp
+</TD></TR>
+
+<TR HEIGHT="10"><TD>3
+</TD><TD BGCOLOR="#382810">&nbsp
+</TD><TD BGCOLOR="#480C04">&nbsp
+</TD><TD BGCOLOR="#38281C">&nbsp
+</TD><TD BGCOLOR="#4C200C">&nbsp
+</TD><TD BGCOLOR="#442C14">&nbsp
+</TD><TD BGCOLOR="#402C20">&nbsp
+</TD><TD BGCOLOR="#581008">&nbsp
+</TD><TD BGCOLOR="#483420">&nbsp
+</TD><TD BGCOLOR="#443428">&nbsp
+</TD><TD BGCOLOR="#54281C">&nbsp
+</TD><TD BGCOLOR="#5C1C14">&nbsp
+</TD><TD BGCOLOR="#5C2408">&nbsp
+</TD><TD BGCOLOR="#543818">&nbsp
+</TD><TD BGCOLOR="#543824">&nbsp
+</TD><TD BGCOLOR="#6C1810">&nbsp
+</TD><TD BGCOLOR="#682C10">&nbsp
+</TD></TR>
+
+<TR HEIGHT="10"><TD>4
+</TD><TD BGCOLOR="#5C4424">&nbsp
+</TD><TD BGCOLOR="#702418">&nbsp
+</TD><TD BGCOLOR="#683C24">&nbsp
+</TD><TD BGCOLOR="#7C2C0C">&nbsp
+</TD><TD BGCOLOR="#644C2C">&nbsp
+</TD><TD BGCOLOR="#704808">&nbsp
+</TD><TD BGCOLOR="#802818">&nbsp
+</TD><TD BGCOLOR="#745028">&nbsp
+</TD><TD BGCOLOR="#883024">&nbsp
+</TD><TD BGCOLOR="#6C5040">&nbsp
+</TD><TD BGCOLOR="#8C340C">&nbsp
+</TD><TD BGCOLOR="#702068">&nbsp
+</TD><TD BGCOLOR="#785844">&nbsp
+</TD><TD BGCOLOR="#8C4040">&nbsp
+</TD><TD BGCOLOR="#845C30">&nbsp
+</TD><TD BGCOLOR="#9C3424">&nbsp
+</TD></TR>
+
+<TR HEIGHT="10"><TD>5
+</TD><TD BGCOLOR="#A42818">&nbsp
+</TD><TD BGCOLOR="#A44814">&nbsp
+</TD><TD BGCOLOR="#8C6440">&nbsp
+</TD><TD BGCOLOR="#8C7038">&nbsp
+</TD><TD BGCOLOR="#8C6850">&nbsp
+</TD><TD BGCOLOR="#B04434">&nbsp
+</TD><TD BGCOLOR="#B44C20">&nbsp
+</TD><TD BGCOLOR="#987058">&nbsp
+</TD><TD BGCOLOR="#A07840">&nbsp
+</TD><TD BGCOLOR="#BC601C">&nbsp
+</TD><TD BGCOLOR="#9C8448">&nbsp
+</TD><TD BGCOLOR="#C45454">&nbsp
+</TD><TD BGCOLOR="#C86C20">&nbsp
+</TD><TD BGCOLOR="#AC7C58">&nbsp
+</TD><TD BGCOLOR="#B08848">&nbsp
+</TD><TD BGCOLOR="#C87C54">&nbsp
+</TD></TR>
+
+<TR HEIGHT="10"><TD>6
+</TD><TD BGCOLOR="#E07020">&nbsp
+</TD><TD BGCOLOR="#B89C54">&nbsp
+</TD><TD BGCOLOR="#FC2C00">&nbsp
+</TD><TD BGCOLOR="#C08C70">&nbsp
+</TD><TD BGCOLOR="#CC9850">&nbsp
+</TD><TD BGCOLOR="#E48430">&nbsp
+</TD><TD BGCOLOR="#E07070">&nbsp
+</TD><TD BGCOLOR="#D09878">&nbsp
+</TD><TD BGCOLOR="#F8883C">&nbsp
+</TD><TD BGCOLOR="#ECA038">&nbsp
+</TD><TD BGCOLOR="#D8B864">&nbsp
+</TD><TD BGCOLOR="#E0A484">&nbsp
+</TD><TD BGCOLOR="#F0B444">&nbsp
+</TD><TD BGCOLOR="#F4C04C">&nbsp
+</TD><TD BGCOLOR="#F0B08C">&nbsp
+</TD><TD BGCOLOR="#FCD45C">&nbsp
+</TD></TR>
+
+<TR HEIGHT="10"><TD>7
+</TD><TD BGCOLOR="#FCB0B0">&nbsp
+</TD><TD BGCOLOR="#042410">&nbsp
+</TD><TD BGCOLOR="#142418">&nbsp
+</TD><TD BGCOLOR="#203C18">&nbsp
+</TD><TD BGCOLOR="#18480C">&nbsp
+</TD><TD BGCOLOR="#004430">&nbsp
+</TD><TD BGCOLOR="#186408">&nbsp
+</TD><TD BGCOLOR="#245C24">&nbsp
+</TD><TD BGCOLOR="#385C24">&nbsp
+</TD><TD BGCOLOR="#086C44">&nbsp
+</TD><TD BGCOLOR="#287C14">&nbsp
+</TD><TD BGCOLOR="#407434">&nbsp
+</TD><TD BGCOLOR="#587830">&nbsp
+</TD><TD BGCOLOR="#349C1C">&nbsp
+</TD><TD BGCOLOR="#708438">&nbsp
+</TD><TD BGCOLOR="#48A034">&nbsp
+</TD></TR>
+
+<TR HEIGHT="10"><TD>8
+</TD><TD BGCOLOR="#58904C">&nbsp
+</TD><TD BGCOLOR="#44BC28">&nbsp
+</TD><TD BGCOLOR="#849848">&nbsp
+</TD><TD BGCOLOR="#60B84C">&nbsp
+</TD><TD BGCOLOR="#18FC00">&nbsp
+</TD><TD BGCOLOR="#74DC5C">&nbsp
+</TD><TD BGCOLOR="#8CD07C">&nbsp
+</TD><TD BGCOLOR="#A0FC88">&nbsp
+</TD><TD BGCOLOR="#0C0C28">&nbsp
+</TD><TD BGCOLOR="#181848">&nbsp
+</TD><TD BGCOLOR="#000058">&nbsp
+</TD><TD BGCOLOR="#381444">&nbsp
+</TD><TD BGCOLOR="#102468">&nbsp
+</TD><TD BGCOLOR="#283C64">&nbsp
+</TD><TD BGCOLOR="#282878">&nbsp
+</TD><TD BGCOLOR="#4C1080">&nbsp
+</TD></TR>
+
+<TR HEIGHT="10"><TD>9
+</TD><TD BGCOLOR="#384C84">&nbsp
+</TD><TD BGCOLOR="#303094">&nbsp
+</TD><TD BGCOLOR="#48608C">&nbsp
+</TD><TD BGCOLOR="#385CA0">&nbsp
+</TD><TD BGCOLOR="#5050AC">&nbsp
+</TD><TD BGCOLOR="#4C6CAC">&nbsp
+</TD><TD BGCOLOR="#5478BC">&nbsp
+</TD><TD BGCOLOR="#2460D8">&nbsp
+</TD><TD BGCOLOR="#6478D0">&nbsp
+</TD><TD BGCOLOR="#6490E0">&nbsp
+</TD><TD BGCOLOR="#80A0DC">&nbsp
+</TD><TD BGCOLOR="#A420FC">&nbsp
+</TD><TD BGCOLOR="#8484F0">&nbsp
+</TD><TD BGCOLOR="#A0A0FC">&nbsp
+</TD><TD BGCOLOR="#90B8FC">&nbsp
+</TD><TD BGCOLOR="#588C90">&nbsp
+</TD></TR>
+
+<TR HEIGHT="10"><TD>A
+</TD><TD BGCOLOR="#68A0A4">&nbsp
+</TD><TD BGCOLOR="#84C0C4">&nbsp
+</TD><TD BGCOLOR="#98D0D4">&nbsp
+</TD><TD BGCOLOR="#A8CCFC">&nbsp
+</TD><TD BGCOLOR="#CCF4F4">&nbsp
+</TD><TD BGCOLOR="#C0A080">&nbsp
+</TD><TD BGCOLOR="#C4C0A8">&nbsp
+</TD><TD BGCOLOR="#E0C494">&nbsp
+</TD><TD BGCOLOR="#FCE874">&nbsp
+</TD><TD BGCOLOR="#C4FCB0">&nbsp
+</TD><TD BGCOLOR="#FCE4A4">&nbsp
+</TD><TD BGCOLOR="#FCFCC4">&nbsp
+</TD><TD BGCOLOR="#040404">&nbsp
+</TD><TD BGCOLOR="#080808">&nbsp
+</TD><TD BGCOLOR="#0C0C0C">&nbsp
+</TD><TD BGCOLOR="#101010">&nbsp
+</TD></TR>
+
+<TR HEIGHT="10"><TD>B
+</TD><TD BGCOLOR="#141414">&nbsp
+</TD><TD BGCOLOR="#181818">&nbsp
+</TD><TD BGCOLOR="#241C18">&nbsp
+</TD><TD BGCOLOR="#202020">&nbsp
+</TD><TD BGCOLOR="#242424">&nbsp
+</TD><TD BGCOLOR="#282828">&nbsp
+</TD><TD BGCOLOR="#302820">&nbsp
+</TD><TD BGCOLOR="#303030">&nbsp
+</TD><TD BGCOLOR="#383028">&nbsp
+</TD><TD BGCOLOR="#343434">&nbsp
+</TD><TD BGCOLOR="#34383C">&nbsp
+</TD><TD BGCOLOR="#443834">&nbsp
+</TD><TD BGCOLOR="#3C3C3C">&nbsp
+</TD><TD BGCOLOR="#4C3C30">&nbsp
+</TD><TD BGCOLOR="#404040">&nbsp
+</TD><TD BGCOLOR="#44403C">&nbsp
+</TD></TR>
+
+<TR HEIGHT="10"><TD>C
+</TD><TD BGCOLOR="#444444">&nbsp
+</TD><TD BGCOLOR="#50483C">&nbsp
+</TD><TD BGCOLOR="#584438">&nbsp
+</TD><TD BGCOLOR="#4C4C4C">&nbsp
+</TD><TD BGCOLOR="#604C3C">&nbsp
+</TD><TD BGCOLOR="#34585C">&nbsp
+</TD><TD BGCOLOR="#505050">&nbsp
+</TD><TD BGCOLOR="#545454">&nbsp
+</TD><TD BGCOLOR="#5C5C5C">&nbsp
+</TD><TD BGCOLOR="#685C50">&nbsp
+</TD><TD BGCOLOR="#606060">&nbsp
+</TD><TD BGCOLOR="#447074">&nbsp
+</TD><TD BGCOLOR="#7C6450">&nbsp
+</TD><TD BGCOLOR="#686868">&nbsp
+</TD><TD BGCOLOR="#6C6C6C">&nbsp
+</TD><TD BGCOLOR="#786C60">&nbsp
+</TD></TR>
+
+<TR HEIGHT="10"><TD>D
+</TD><TD BGCOLOR="#707070">&nbsp
+</TD><TD BGCOLOR="#747474">&nbsp
+</TD><TD BGCOLOR="#7C7C7C">&nbsp
+</TD><TD BGCOLOR="#948064">&nbsp
+</TD><TD BGCOLOR="#908474">&nbsp
+</TD><TD BGCOLOR="#AC8870">&nbsp
+</TD><TD BGCOLOR="#909090">&nbsp
+</TD><TD BGCOLOR="#9C9484">&nbsp
+</TD><TD BGCOLOR="#8094B8">&nbsp
+</TD><TD BGCOLOR="#A0A0A0">&nbsp
+</TD><TD BGCOLOR="#B0AC98">&nbsp
+</TD><TD BGCOLOR="#ACACAC">&nbsp
+</TD><TD BGCOLOR="#B8B8B8">&nbsp
+</TD><TD BGCOLOR="#CCCCCC">&nbsp
+</TD><TD BGCOLOR="#D8D8D8">&nbsp
+</TD><TD BGCOLOR="#CCCCFC">&nbsp
+</TD></TR>
+
+</TABLE>
+
+<DIV ID="tablenote">
+<BR>
+Number = 0x&ltrow>&ltcolumn> or<BR>
+(monsters) -1 show on automap, -2 hide on automap<BR>
+(items) -1 hide on automap, -2 hide on automap and ground<BR>
+(missiles) -1 hide on automap, -2 show tracer/hostile/guided on automap<BR>
+</DIV>
+
+</TD><TD WIDTH="50%" VALIGN="TOP" ALIGN="CENTER">
+
+<TABLE ID="table2" border="1" cellspacing="0" cellpadding="2">
+<CAPTION>Text colours<BR><BR></CAPTION>
+
+<TR><TH>Number
+</TH><TH WIDTH="130">Colour
+</TH></TR>
+
+<TR><TD>-1
+</TD><TD>Default
+</TD></TR>
+
+<TR><TD>0
+</TD><TH BGCOLOR="BLACK"><DIV STYLE="color:#c4c4c4">White</DIV>
+</TD></TR>
+
+<TR><TD>1
+</TD><TH BGCOLOR="BLACK"><DIV STYLE="color:#b04434">Red</DIV>
+</TD></TR>
+
+<TR><TD>2
+</TD><TH BGCOLOR="BLACK"><DIV STYLE="color:#18f200">Green 1</DIV>
+</TD></TR>
+
+<TR><TD>3
+</TD><TH BGCOLOR="BLACK"><DIV STYLE="color:#5050ac">Blue</DIV>
+</TD></TR>
+
+<TR><TD>4
+</TD><TH BGCOLOR="BLACK"><DIV STYLE="color:#948064">Gold 1</DIV>
+</TD></TR>
+
+<TR><TD>5
+</TD><TH BGCOLOR="BLACK"><DIV STYLE="color:#505050">Grey</DIV>
+</TD></TR>
+
+<TR><TD>6
+</TD><TH BGCOLOR="WHITE"><DIV STYLE="color:#000000">Black</DIV>
+</TD></TR>
+
+<TR><TD>7
+</TD><TH BGCOLOR="BLACK"><DIV STYLE="color:#ac9c64">Gold 2</DIV>
+</TD></TR>
+
+<TR><TD>8
+</TD><TH BGCOLOR="BLACK"><DIV STYLE="color:#d08420">Orange</DIV>
+</TD></TR>
+
+<TR><TD>9
+</TD><TH BGCOLOR="BLACK"><DIV STYLE="color:#d8b864">Yellow</DIV>
+</TD></TR>
+
+<TR><TD>10
+</TD><TH BGCOLOR="BLACK"><DIV STYLE="color:#186408">Green 2</DIV>
+</TD></TR>
+
+<TR><TD>11
+</TD><TH BGCOLOR="BLACK"><DIV STYLE="color:#a420fc">Purple</DIV>
+</TD></TR>
+
+<TR><TD>12
+</TD><TH BGCOLOR="BLACK"><DIV STYLE="color:#287c14">Green 3</DIV>
+</TD></TR>
+
+</TABLE>
+
+</TD></TABLE>
+
+</CENTER>
+
+<P>
+
+<P><A NAME="HISTORY"></A><HR>
+<DIV ID="header3">HISTORY</DIV><P>
+
+6.5f<br>
+Added extrawork dll "Systemdescription 2.0.7" to list of safe dlls.<br>
+<br>
+6.5e<br>
+Fixed crash when loaded as d2loader plugin then removed.<br>
+Added feature to block ctrl+click quest item sell bug.<br>
+Added toggle for disabling item gleam (<b>Show Item Gleam Toggle</b>).<br>
+Added base+extra=total breakdown of skill levels to skill hover desc.<br>
+<br>
+6.5d<br>
+Show monster resist mininum now accepts negative values.<br>
+Added config array of skills for controlling which player skills to list (<b>Show Skill Levels</b>).<br>
+Added toggle for disabling in game cinematics (<b>Show Videos Toggle</b>).<br>
+Added toggle for disabling show quest log button (<b>Show Quest Button Toggle</b>).<br>
+Added toggle for blocking inventory manipulation (<b>Inventory Protect Toggle</b>).<br>
+<br>
+6.5c<br>
+Added new version check dlls to list of safe dlls.<br>
+Fixed bug with tppk protection exiting for level 0.<br>
+<br>
+6.5b<br>
+Fixed crash with listing room presets.<br>
+Added feature to display info when other players cast skills and acquire states with skill info.<br>
+Extra monsters in mods now default to showing on automap.<br>
+Renamed some missile, stat and state vocab entrys (may break some configs).<br>
+Added config array of skills for controlling tppk chicken (<b>Tppk Skill Levels</b>).<br>
+Improved itemlist html.<br>
+<br>
+6.5<br>
+Fixed problem with outline of windows fonts.<br>
+Changed view equipment to show items from wearers point of view.<br>
+Added strength and dexterity display to show other players equipment screen.<br>
+Added more skills to tppk protection list.<br>
+Prevented stop minimize toggle from effecting fullscreen.<br>
+Added list preset units in current room key (<b>List Room Presets Key</b>).<br>
+Added key shortcut for giving potions to mercs (<b>Give Merc Potion Keys</b>).<br>
+<br>
+6.4h<br>
+Loader autoload check box now defaults to on and no longer auto clears.<br>
+Replaced Diablo II's slow (order n<sup>2</sup>) player minion search.<br>
+Added merc level and experience stats to info page.<br>
+Fixed "drop hack" with too many skills on some game mods.<br>
+Added ping chicken (<b>Chicken Ping</b>, <b>Chicken Ping Toggle</b>).<br>
+<br>
+6.4g<br>
+Added loader option to auto reinstall after anti-detection unload (this performs an integrity scan and only reinstalls if its successful).<br>
+<br>
+6.4f<br>
+Added extrawork dll "System Debug Info 1.06" to list of safe dlls.<br>
+<br>
+6.4e<br>
+Fixed view equipment with inventory already open bug.<br>
+Fixed double quick exit key bug.<br>
+Fully rewrote new input line.<br>
+Added more info to info page, including effective run/walk speeds and frames per cast/attack.<br>
+Added extra keycode to key and toggle config vars (2nd value is key to hold).<br>
+Added delay to auto install.<br>
+Added replacing Diablo II fonts with windows fonts.<br>
+Added next quest and next waypoint values for level targets.<br>
+<br>
+6.4d<br>
+Fixed display of negative experience this game.<br>
+Added toggle for disabling teleport fading (included in <b>Full Visuals Toggle</b>).<br>
+Fixed double display of dead players on automap.<br>
+Added toggle for showing invis units (open play) (<b>Invis Units Toggle</b>, default off).<br>
+Reworked new input line.<br>
+Added toggle for showing packet 0x64 scans (<b>Show Packet 64 Toggle</b>, default off), NOTE this is not cause for alarm or hasty unloading as maphack deals with this scan without needing to unload.<br>
+Several theoretical anti-detection improvements.<br>
+Fixed bug with View Socketables Toggle config variable.<br>
+Added loader option to auto install to next instance of Diablo II.<br>
+Added toggle to block window minimizing (<b>Stop Minimize Toggle</b>).<br>
+Added toggle to block npc intro text (<b>Stop Npc Intro Toggle</b>).<br>
+<br>
+6.4c<br>
+Fixed monster TC level calculation.<br>
+Added option to show chests TC level (<b>Chests TC Toggle</b>, default off).<br>
+Added seperate config variable for evil urns (<b>Evil Urn Group/Colour</b>).<br>
+Increased number of rule chickens to 10 (previously 5).<br>
+Fixed minor bug with input line control when removing maphack.<br>
+Automap party+name default now set at start of every game.<br>
+Restored tppk protection feature (<b>Tppk Protect Toggle</b>, default off).<br>
+<br>
+6.4b<br>
+Added merging of identical toggle messages.<br>
+Fixed cd-key hash generators reading of install path from registry.<br>
+Fixed rule chickens not chickening out.<br>
+Fixed itemlist crash with wide chars.<br>
+<br>
+6.4a<br>
+Removed second value of chicken life variables (use -first value instead for percents).<br>
+Added extrawork dll "System Debug Info 1.05" to list of safe dlls.<br>
+<br>
+6.4<br>
+Speeded up processing of vocab and config files by 2 to 4 times.<br>
+Added toggle for showing full item descs on ground (<b>Ground Item Desc Toggle</b>, default '7').<br>
+Added config arrays for controling automap infomation (see config, max 20).<br>
+Added loader shortcut parameters -REMOVE and -INSTALL &lt;config filename&gt;.<br>
+Added #VOCAB directive to define words from config file.<br>
+Include filenames can now be absolute paths.<br>
+Added itemlister (controled by <b>Save Item List Key</b>, default "-" on keypad), NOTE files are now saved in maphack directory.<br>
+Added string value to toggle vars to describe effect when toggleing (these were previous hardcoded).<br>
+Replaced unit colours variables with groups (you can still use colours as a shortcut to assign new groups, see config).<br>
+Added group rules and group chicken (see config).<br>
+Changed chicken life percent to negative first value (but old way still works for now).<br>
+Replaced hostile nearby chicken, hidden item level and hidden item value with group rules.<br>
+<br>
+6.3<BR>
+<!--Fixed crash when monster resistance strings were not defined.<BR>
+Fixed switching panes on info/stats summary page in high res.<BR>-->
+Fixed memory leak in loader.<BR>
+Completely reworked monster and missile, variables and functionaly (see config, with examples!).<BR>
+Added config array for player colours based on class and relationship (<B>Player Colours</B>).<BR>
+Changed numbered seperate config vars (<B>Light Radius X</B>, <B>Light Radius Toggle X</B> and <B>Level Targets X</B>) to arrays.<BR>
+Added toggle for game name defaulting to last game (<B>Last Game Name Toggle</B>, default on).<BR>
+Added toggle for target arrows overlaping (<B>Overlap Arrow Toggle</B>, default on).<BR>
+Removed most of vocab files old compatibility entrys (excluding chicken).<BR>
+Added broken item text colour config var (<B>Broken Item Colour</B>).<BR>
+Replace quest item colour config var with vocab group (<B>Quest Items</B>).<BR>
+Added buttons to loader for viewing vocab file, message log and debug log.<BR>
+Expanded colour messages filter to include in game messages.<BR>
+Added config vars for cursor and waypoint bmps (<B>Cursor Blob File</B> and <B>Waypoint Blob File</B>)<BR>
+<BR>
+6.2<BR>
+Added second light radius toggle and value.<BR>
+Fixed problem with cdkey refiller+lowercase cdkeys.<BR>
+Added optional bmp file to replace cursor (CURSOR.BMP).<BR>
+Added #INCLUDE file directive.<BR>
+Removed scroll-lock defaulting to off.<BR>
+Fixed level targets bug with Inner Cloister and Outer Cloister.<BR>
+Added third level target arrow.<BR>
+Minor theoretical anti-detection improvement.<BR>
+Added list box of running Diablo II processes to loader.<BR>
+Added list box of CFG files to loader (loads currently selected one).<BR>
+Added second value to chicken life vars for percentage (NOTE calculates value on entering game).<BR>
+Added show highlighted monster resists (if greater than selected minimum etc, see config).<BR>
+Added toggle for display of experience gained this game (<B>Game Experience Toggle</B>).<BR>
+Added info/stats summary page (opened by <B>View Info Page Key</B>, default '8').<BR>
+Fixed keys/toggles not working in trade screen.<BR>
+<BR>
+6.1d<BR>
+Fixed install crash on windows 9x.<BR>
+<BR>
+6.1c<BR>
+Renamed test radius config vars to yard radius.<BR>
+Added toggle for display of version+expansion (<B>Useless Info Toggle</B>).<BR>
+Added toggle for display of server ip (<B>Server Ip Toggle</B>).<BR>
+Added create game name defaults to last game entered.<BR>
+Minor theoretical anti-detection improvement.<BR>
+<BR>
+6.1b<BR>
+Corrected some level names in vocab file.<BR>
+Added second level target arrow (see config).<BR>
+Fixed clearing of level targets when entering new game.<BR>
+Added automatic reveal map feature.<BR>
+Added extrawork dll "System Debug Info 1.03" to list of safe dlls.<BR>
+<BR>
+6.1<BR>
+Improved integrity scan.<BR>
+Fixed monster levels display (now correct for all except hidden minions).<BR>
+Added show yard radius tool (see default config).<BR>
+Added level target arrow, controlled by config array/vars <B>Level Targets[&lt;level&gt;]</B> and <B>Target Arrow Toggle</B> (see default config).<BR>
+Reordered default config into roughly logical groups.<BR>
+Changed first index of almost all config arrays to 0 (excludes qualitys and runes/charms/gems etc), NOTE this will some break configs that don't use VCB file.<BR>
+Added option to force any automap transprancy (<B>Automap Fade Trans</B>), eg 3.<BR>
+<BR>
+6.0e<BR>
+Added Diablo II integrity scan option to loader (use this after extrawork unload).<BR>
+<BR>
+6.0d<BR>
+Added support for more than one keystring per keyfile.<BR>
+Theoretical anti-detection improvement.<BR>
+<BR>
+6.0c<BR>
+Added config array <B>Monster Hiddens[&lt;monster&gt;][&lt;owner&gt;]</B> (owner = 0 free range, 1 yours, 2 party, 3 hostile, 4 other), toggleable by <B>Hidden Monsters Toggle</B>, with example in config to hide other necros skeletons.<BR>
+Added option to change font used to display items+most other highlighted text (<B>Other Font Size</B>, <B>Other Font Toggle</B>).<BR>
+Added config vars <B>New Version Dll Action</B> and <B>Extrawork Dll Action</B>, value = 0 execute, 1 don't execute, 2 unload maphack before executing (safest and default), 3 crash.<BR>
+Added portal drop hack protection.<BR>
+<BR>
+6.0b<BR>
+Fixed shift slow down bug.<BR>
+Added auto replacing of .CFG/.VCB/.KEY files with .TXT versions if file exists and is modified later (ie it fixes any files saved with .TXT on end).<BR>
+Added make keyfile option to cd-key hash generator.<BR>
+<BR>
+6.0a<BR>
+Added tolerence for invalid chars in keyfile, eg spaces/newlines.<BR>
+Added manualy enter cd-key option to cd-key hash generator.<BR>
+<BR>
+6.0<BR>
+Updated for Diablo II v1.10.<BR>
+Added toggle to disable right click swap (<b>Right Click Swap Toggle</b>).<BR>
+Moved D2MESSAGES.LOG to maphack directory.<BR>
+Added anti-detection code for all known (to me) methods of detection.<BR>
+<BR>
+5.1<BR>
+Updated for Diablo II v1.10s beta.<BR>
+<BR>
+5.0<BR>
+Updated for Diablo II v1.10 beta.<BR>
+<BR>
+4.8<BR>
+Added chat logging and colour messages filter toggle (<b>Message Filter Toggle</b>).<BR>
+Added new values for item automap colour, -4 hide if value < <b>Hidden Item Value</b>, -5 allways hide.<BR>
+Added shortcut (right click) to drop item in hand at free space on opposite side of screen (try it and see).<BR>
+Fixed 4.7j incompatibility when loaded as d2loader plugin.<BR>
+Added show item sell value minimum (<b>Item Value Minimum</b>).<BR>
+Fixed config bug of ignoring rest of indices when using "+".<BR>
+Added debug feature to log processed vocab and config files to D2MAPHACK.DBG (need to create the DBG file to enable).<BR>
+Removed blacklist.<BR>
+<BR>
+4.7j<BR>
+Improved socket protection so it can't be detected (now blocks instead of swapping).<BR>
+Added option to show item sell value.<BR>
+Added pre/post strings for ethereal items.<BR>
+Added join game name defaults to last game entered.<BR>
+Added logging of in game messages to D2MESSAGES.LOG (defaults to off).<BR>
+Added tppk protection (defaults to off), NOTE this is NOT infallible.<BR>
+<BR>
+4.7i<BR>
+Improved doublethrow drop hack protection.<BR>
+<BR>
+4.7h<BR>
+Added doublethrow drop hack protection.<BR>
+<BR>
+4.7g<BR>
+Fixed gold number colouring bug.<BR>
+Fixed broken mods "ptWarp" warning.<BR>
+Fixed hovering over player corpse when showing unitids crash.<BR>
+Added show total merc magic find.<BR>
+Restored perm show items feature.<BR>
+Added extra dimension to item arrays for sockets.<BR>
+Added perm show life/mana orbs toggle (<b>Perm Show Orbs Toggle</b>).<BR>
+Added new value for items automap colour, -3 don't show item on ground if level below Hidden Items Level.<BR>
+<BR>
+4.7f<BR>
+Renamed view inventory key to <b>View Equipment Key</b>.<BR>
+Removed perm show items feature.<BR>
+Blocked attempts to pick up items when viewing others inventory.<BR>
+Added in game clock.<BR>
+Fixed broken ethereal items colour feature/bug.<BR>
+Added show total magic find on char screen.<BR>
+Fixed chicken out bug.<BR>
+Added potion drop hack protection.<BR>
+<BR>
+4.7e<BR>
+Added configurable show monster corpses on automap.<BR>
+Added show item socketables (gems etc) and toggle (defaults to "9").<BR>
+Fixed random pickup items crash.<BR>
+New input line now defaults to off.<BR>
+<BR>
+4.7d<BR>
+Fixed item drop hack protection merging arrows/bolts bug.<BR>
+Fixed random config dealloc crash when removing.<BR>
+Fixed infravision casting on targets through walls and iron golem on hidden item bugs, see <A HREF="#FAQ2">FAQ</A>.<BR>
+Added option to show monsters level.<BR>
+Split visuals toggle into weather, infravision, light radius, screen shake and corpse toggles.<BR>
+Replaced nearby hostile toggle with chicken nearby hostile life and toggle (see config).<BR>
+Added other missile colour setting.<BR>
+Added out of town select toggle.<BR>
+<BR>
+4.7c<BR>
+Improved item drop hack protection.<BR>
+Added option to show active rooms on automap.<BR>
+Replaced chat input line with edit control (allows cut/paste etc).<BR>
+Added waypoint bmp.<BR>
+Added options to show item ilvls and unitids.<BR>
+<BR>
+4.7b<BR>
+Fixed some word clashes in vocab file.<BR>
+Fixed guided arrow firing at minions/neutrals illusion.<BR>
+Fixed view golem without inventory crash.<BR>
+Fixed nearby unit skills on minions/neutrals.<BR>
+<BR>
+4.7<BR>
+Added message when chickening out.<BR>
+Fixed random TC list init crash when entering game.<BR>
+Allowed selection of players anywhere (for view inventory).<BR>
+Added view inventory of iron golems, valkyries, shadow warriors/masters.<BR>
+<BR>
+4.6g<BR>
+Redesigned chicken config variables (see config).<BR>
+Added arrays for hide monster and missile corpses with defaults to hide dead vines and traps.<BR>
+Added ignore spelling of colour/color in config.<BR>
+Fixed TFW mod crash.<BR>
+Added time in game display.<BR>
+<BR>
+4.6f<BR>
+Added tracer missile colour.<BR>
+Added druid drop hack protection.<BR>
+Added exit game on low life and/or hostility (0 don't quit, 1 quit if hostile nearby, 2 just quit) options.<BR>
+<BR>
+4.6e<BR>
+Improved item drop hack protection.<BR>
+Set default view inventory key to "0".<BR>
+<BR>
+4.6d<BR>
+Added automatic deny trading while viewing inventory.<BR>
+Added item drop hack protection.<BR>
+<BR>
+4.6c<BR>
+Added show other players inventory key (hover over and press).<BR>
+Added perm show item names on ground toggle.<BR>
+Added array for automap missile colours (-1 don't show, -2 show hostile/guided etc).<BR>
+<BR>
+4.6b<BR>
+Fixed shrine graphics alignment with large shrines on minimap and custom sized shrines.<BR>
+Fixed glide and direct3d blob colour caching bug.<BR>
+<BR>
+4.6<BR>
+Added extra dimension to item arrays for ethereals.<BR>
+Added option to show hostile/guided arrows/bolts on automap.<BR>
+Added option to show monsters TC level.<BR>
+Restuctured toggle/flag config variables.<BR>
+Renamed D2MAPHACK.DAT back to D2MAPHACK.DLL.<BR>
+<BR>
+4.5b<BR>
+Added toggle show hidden items, toggle show items on automap.<BR>
+Added items/monsters/etc vocabulary file (see D2MAPHACK.VCB).<BR>
+Added socket protection config option.<BR>
+Added show if cow king killed on quest log.<BR>
+<BR>
+4.5<BR>
+Fixed numbering/colouring of extra runes in mods.<BR>
+Fixed hirelings showing immunitys.<BR>
+Changed format of shrine graphics to bmp.<BR>
+Added 2nd quantity to item colours for automap colour (-1 don't show, -2 don't show item on ground).<BR>
+Added extra dimension to item arrays for item qualitys.<BR>
+Added configurable automap blob/cross shapes (bmp files).<BR>
+Added unopened chests show on automap.<BR>
+Added config var for default automap party/names.<BR>
+<BR>
+4.4<BR>
+Fixed toggle automap party bug.<BR>
+Added exit game key.<BR>
+Added champion monster descriptions.<BR>
+Added array variable type (variable[numbers]: value).<BR>
+Changed item colour variables to arrays (eg Rune Colours[1,3,11-14,20+]: 4).<BR>
+Added array for monster colours (-1 default, -2 don't show).<BR>
+Added array for show monster death animations.<BR>
+<BR>
+4.3f<BR>
+Fixed config strings bug.<BR>
+<BR>
+4.3e<BR>
+Added config string for correct tomb.<BR>
+Added colours for rare/unique items.<BR>
+Added fire shrine (provided by "Carlo Q.N.").<BR>
+Renamed D2MAPHACK.DLL to D2MAPHACK.DAT.<BR>
+<BR>
+4.3d<BR>
+Added correct tomb has a "*" next to level name.<BR>
+Now uses new d2loader plugin format.<BR>
+Fixed crash when using mods with missing levels.<BR>
+<BR>
+4.3c<BR>
+Fixed loader problems.<BR>
+Updated for Diablo II v1.09d (changed "c" to "d").<BR>
+<BR>
+4.3b<BR>
+Fixed problems with relocated dlls.<BR>
+Added map scrolling speed setting.<BR>
+Added disable diagonal map scrolling option.<BR>
+Added trojan detection.<BR>
+<BR>
+4.3<BR>
+Updated for Diablo II v1.09c.<BR>
+<BR>
+4.2<BR>
+Fixed hostile player colour bug.<BR>
+Toggle visual effects now includes screen shaking.<BR>
+Added virtual map scrolling.<BR>
+Added option to disable shenk death animations.<BR>
+<BR>
+4.1b<BR>
+Fixed glide and direct3d shrine graphics bug.<BR>
+Fixed champion colour bug.<BR>
+Added monster immunity and aura descriptions.<BR>
+Added colour code shortcut ("%").<BR>
+<BR>
+4.1<BR>
+Rewritten as a DLL and now supports d2loader.<BR>
+Can now be lauched before entering a game.<BR>
+Added option to disable rune numbering.<BR>
+Added seperate skull colour settings.<BR>
+Added minimap shrines.<BR>
+Added option to use large shrines on minimap.<BR>
+Added number of sockets in item names.<BR>
+Added special monster magical bonuses on automap.<BR>
+<BR>
+4.0<BR>
+Updated for Diablo II v1.09.<BR>
+<BR>
+3.6c<BR>
+Reveal automap now shows cave/stairs/doorway level names, toggleable with numpad "+".<BR>
+<BR>
+3.6b<BR>
+Reveal automap can predict some health, mana, combat, skill and stamina shrines.<BR>
+Gems, healing pots, mana pots and rejuvs colour now configurable.<BR>
+Boss, minion and champion monsters automap colour now seperately configurable.<BR>
+Added graphics for refilling, health, mana (by me), portal, exploding and poison (by "HariKariEd") shrines.<BR>
+<BR>
+3.6<BR>
+Reveal automap now shows undiscovered preset shrines (mostly in acts 1,2) with a question mark above.<BR>
+<BR>
+3.5b<BR>
+Made config file easier to use.<BR>
+Prevented toggle visuals from effecting runes, charms and life bar.<BR>
+Fixed full light radius, it now overides all quest and skill FX.<BR>
+<BR>
+3.5<BR>
+Added a configuration file.<BR>
+Reveal automap shows chests in fake tombs, and an X for staff orifice.<BR>
+<BR>
+3.4<BR>
+Made monsters life bar brighter.<BR>
+Made runes unique coloured and numbered, charms purple.<BR>
+<BR>
+3.3b<BR>
+Fixed paging crash on low spec machines.<BR>
+Reveal automap shows chests, cs seals, act3 sewer lever and an X where izual starts.<BR>
+Added a program icon.<BR>
+<BR>
+3.3<BR>
+Reveal automap shows act5 waypoints, quest features (cairn stones, tree of inifuss, tower tome, horadric malus, gibbin, lam esen's tome, ruined temple stairs, etc).<BR>
+<BR>
+3.2b<BR>
+Removed act5 non monsters from automap.<BR>
+Added barb allys as minions on automap.<BR>
+Improved version test.<BR>
+Removed mousepad whisper joke.<BR>
+<BR>
+3.2<BR>
+Updated for LOD.<BR>
+Added sanity check when loading shrines.<BR>
+Changed in game keys to "/","*","-" on numpad.<BR>
+<BR>
+3.1<BR>
+Fully updated for Diablo II v1.08.<BR>
+<BR>
+3.0<BR>
+Reveal automap only update for Diablo II v1.08.<BR>
+<BR>
+2.5<BR>
+Can handle graphics for all shrines, includes examples by "Tidus".<BR>
+<BR>
+2.4b<BR>
+Added info page.<BR>
+<BR>
+2.4<BR>
+Fixed win2k compatibility problem.<BR>
+<BR>
+2.3<BR>
+Added graphic for gemshrines.<BR>
+<BR>
+2.2<BR>
+Special monsters different colour on automap.<BR>
+Big speedup in act4 reveal automap.<BR>
+<BR>
+2.0<BR>
+Added advantage mod style features :-<BR>
+&nbsp;Full screen light radius, full infravision and sunny weather (toggleable with "9").<BR>
+&nbsp;Monsters show on automap (toggleable with "8").<BR>
+<BR>
+1.0<BR>
+Reveals entire acts automap by pressing "0" in game.<BR>
+
+<P><HR>
+
+<DIV ID="header4">
+&copy; 2001-5 mousepad - <a href="mailto:mousepad@mousepad-d2.com?subject=Diablo II Maphack">mousepad@mousepad-d2.com</A><BR>
+Updates :- <a href="http://www.mousepad-d2.com/" target="_blank">http://www.mousepad-d2.com/</A><BR>
+</DIV>
+
+</BODY>
+</HTML>
